@@ -38,8 +38,24 @@
             <div class="win" v-if="monsterLife == 0">Voce ganhou :)</div>
             <div class="lose" v-else="playerLife == 0">Voce perdeu :(</div>
         </div>
-        <div class="panel buttons">3</div>
-        <div class="panel logs">4</div>
+        <div class="panel buttons">
+            <template v-if="running">
+                <button class="btn attack" @click="attack(false)">Ataque</button>
+                <button class="btn special-attack" @click="attack(true)">Ataque Especial</button>
+                <button class="btn heal" @click="healAndHurt">Curar</button>
+                <button class="btn give-up" @click="running=false">Desistir</button>
+            </template>
+            <template v-else>
+                <button class="btn new-game" @click="startGame">Iniciar jogo</button>
+            </template>
+        </div>
+        <div class="panel logs" v-if="logs.length">
+            <ul>
+                <li v-for="log in logs" class="log" :class="log.cls">
+                    {{log.text}}
+                </li>
+            </ul>
+        </div>
     </section>
 
     <footer>

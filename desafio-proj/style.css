@@ -60,3 +60,69 @@ html{
 .result .lose{
     color: red;
 }
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 5px 10px;
+    margin: 0 px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.new-game{
+    background-color: #4253af;
+    color: white;
+}
+.attack{
+    background-color: #e51c23;
+    color: white;
+}
+.special-attack{
+    background-color: #ff9800;
+    color: black;
+}
+.heal {
+    background-color: #259b24;
+    color: white;
+}
+.give-up{
+    background-color: #bbbbbb;
+    color: black;
+}
+
+
+.logs ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logs ul li{
+    display: flex;
+    justify-content: center;
+    margin: 4px 0px;
+    padding: 3px 0px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.player{
+    background-color: #4253afaa;
+    color: #fff;
+}
+.playerWin{
+    background-color: #259b24aa;
+    color: #fff;
+}
+.monster{
+    background-color: #e51c23aa;
+    color: #fff;
+}
