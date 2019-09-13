@@ -56,6 +56,5 @@ new Vue({
         hasResult(value){
             if(value) this.running = false;
         }
-    },
-    
-})
+    }    
+});
