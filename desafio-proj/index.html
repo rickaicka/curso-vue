@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+    <section id="app">
+        <div class="panel scores">
+            <div class="score">
+                <h1>
+                    Jogador
+                </h1>
+                <div class="life-bar">
+                    <div class="life"
+                        :class="{danger: playerLife < 20}"
+                        :style="{width: playerLife + '%'}"></div>
+                </div>
+                <div>{{playerLife}}%</div>
+            </div>
+            <div class="score">
+                <h1>
+                    Monster
+                </h1>
+                <div class="life-bar">
+                        <div class="life"
+                            :class="{danger: monsterLife < 20}"
+                            :style="{width: monsterLife + '%'}"></div>
+                </div>
+                <div>{{monsterLife}}%</div>
+            </div>
+        </div>
+        <div v-if="hasResult" class="panel result">
+            <div class="win" v-if="monsterLife == 0">Voce ganhou :)</div>
+            <div class="lose" v-else="playerLife == 0">Voce perdeu :(</div>
+        </div>
+        <div class="panel buttons">3</div>
+        <div class="panel logs">4</div>
+    </section>
+
+    <footer>
+        <script src="app.js"></script>
+    </footer>
+</body>
+</html>
