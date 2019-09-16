@@ -35,4 +35,8 @@ button {
 	border-radius: 4px;
 	margin: 10px;
 }
+
+.class{
+	
+}
 </style>
